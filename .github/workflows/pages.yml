@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: PITANT-Industries/pitant-charts
-          ref: 2cf58dc6ad32f60fc6f5b20bca9473bee6644e3f
+          ref: 8e26a55e240195cfe068949b6eab88432e9eeb3f
           path: .sources/charts
           persist-credentials: false
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
