@@ -4,7 +4,7 @@ const root = new URL('../', import.meta.url);
 const destination = new URL('_site/', root);
 const sources = [
   { source: 'site/', destination: '', marker: 'PITANT Open Source' },
-  { source: '.sources/charts/dist/', destination: 'charts/', marker: 'type="module"' },
+  { source: '.sources/charts/dist/', destination: 'charts/', marker: 'PITANT Charts' },
   { source: '.sources/file-icons/_site/', destination: 'file-icons/', marker: 'PITANT File Format Icons' },
 ];
 
@@ -17,12 +17,6 @@ await rm(destination, { recursive: true, force: true });
 for (const item of sources) {
   await cp(new URL(item.source, root), new URL(item.destination, destination), { recursive: true });
 }
-
-const chartIndex = new URL('charts/index.html', destination);
-const chartPage = await readFile(chartIndex, 'utf8');
-await writeFile(chartIndex, chartPage
-  .replace(/<title>[^<]+<\/title>/u, '<title>PITANT Charts</title>')
-  .replace(/<link rel="icon"[^>]+>/u, '<link rel="icon" type="image/svg+xml" href="../brand/pitant-favicon.svg">'));
 
 const chartCatalog = new URL('.sources/charts/apps/chart-catalog/', root);
 await cp(new URL('THIRD_PARTY_NOTICES.md', chartCatalog), new URL('charts/THIRD_PARTY_NOTICES.md', destination));
