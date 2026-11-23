@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="180" viewBox="0 0 480 180" fill="none">
+  <g stroke="#d8e4e1" stroke-width="1">
+    <path d="M32 38H426M32 82H426M32 126H426"/>
+    <path d="M32 28V138M128 28V138M224 28V138M320 28V138M416 28V138"/>
+  </g>
+  <g stroke="#698d81" stroke-width="1.2" stroke-dasharray="4 5">
+    <path d="M32 38H426M32 126H426"/>
+  </g>
+  <path d="M32 102L56 89L80 93L104 75L128 85L152 98L176 92L200 67L224 61L248 78L272 71L296 90L320 82L344 70L368 74L392 55L416 64" stroke="#10765b" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#10765b" stroke="#f1f7f5" stroke-width="1.25">
+    <circle cx="32" cy="102" r="3.3"/><circle cx="128" cy="85" r="3.3"/><circle cx="224" cy="61" r="3.3"/><circle cx="320" cy="82" r="3.3"/><circle cx="416" cy="64" r="3.5"/>
+  </g>
+  <g fill="#42665c" font-family="system-ui, sans-serif" font-size="11">
+    <text x="439" y="42">UCL</text><text x="439" y="130">LCL</text>
+    <text x="32" y="153" text-anchor="middle">08:00</text><text x="224" y="153" text-anchor="middle">10:00</text><text x="416" y="153" text-anchor="middle">12:00</text>
+  </g>
+</svg>
