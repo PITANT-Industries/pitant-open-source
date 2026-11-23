@@ -1,11 +1,12 @@
 import { cp, readFile, rm, writeFile } from 'node:fs/promises';
+import { basename } from 'node:path';
 
 const root = new URL('../', import.meta.url);
 const destination = new URL('_site/', root);
 const sources = [
   { source: 'site/', destination: '', marker: 'PITANT Open Source' },
   { source: '.sources/charts/dist/', destination: 'charts/', marker: 'PITANT Charts' },
-  { source: '.sources/file-icons/_site/', destination: 'file-icons/', marker: 'PITANT File Format Icons' },
+  { source: '.sources/file-icons/_site/', destination: 'file-icons/', marker: 'PITANT File Format Icons', exclude: ['robots.txt', 'sitemap.xml'] },
 ];
 
 for (const item of sources) {
@@ -15,7 +16,10 @@ for (const item of sources) {
 
 await rm(destination, { recursive: true, force: true });
 for (const item of sources) {
-  await cp(new URL(item.source, root), new URL(item.destination, destination), { recursive: true });
+  await cp(new URL(item.source, root), new URL(item.destination, destination), {
+    recursive: true,
+    filter: (path) => !item.exclude?.includes(basename(path)),
+  });
 }
 
 const chartCatalog = new URL('.sources/charts/apps/chart-catalog/', root);

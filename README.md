@@ -5,7 +5,7 @@ The shared site for PITANT’s public developer projects. [Browse the project hu
 | Project | Site | Source |
 | --- | --- | --- |
 | PITANT Charts | [Chart catalog](https://opensource.pitant.de/charts/) | [PITANT-Industries/pitant-charts](https://github.com/PITANT-Industries/pitant-charts) |
-| PITANT File Icons | [File-format icon catalog](https://opensource.pitant.de/file-icons/) | [PITANT-Industries/pitant-file-icons](https://github.com/PITANT-Industries/pitant-file-icons) |
+| PITANT File Icons | [File-format icon catalog](https://file.icons.pitant.de/) | [PITANT-Industries/pitant-file-icons](https://github.com/PITANT-Industries/pitant-file-icons) |
 
 The Pages workflow builds both catalogs from pinned revisions of their public repositories and serves them alongside the hub. The existing source repositories continue to own their packages and release history. The deployed Charts catalog includes its notices and licenses. The File Icons catalog includes its MIT license.
 

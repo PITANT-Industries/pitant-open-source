@@ -23,13 +23,13 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: PITANT-Industries/pitant-charts
-          ref: b496deb5e32a2a7a4db77b3328963160d35e5cee
+          ref: ef9d98a31147189cec0c121e3fe666991030107f
           path: .sources/charts
           persist-credentials: false
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: PITANT-Industries/pitant-file-icons
-          ref: fdd6ff2bd856555ec881f6c620c638410d3b8423
+          ref: 2480fd848a963caab8c3ef0f1c43870aa4262bee
           path: .sources/file-icons
           persist-credentials: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
