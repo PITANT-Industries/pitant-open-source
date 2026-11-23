@@ -53,6 +53,22 @@ h1 { margin: 0; font-size: clamp(3rem, 8.75vw, 7.2rem); font-weight: 700; letter
 .project-link { display: inline-flex; align-items: center; min-height: 2.65rem; padding: .55rem .75rem; border-radius: 5px; background: var(--green); color: #fff; font-size: .875rem; font-weight: 650; text-decoration: none; }
 .project-link:hover { background: var(--green-dark); }
 .source-link { display: inline-flex; align-items: center; min-height: 2.65rem; gap: .25em; }
+.star-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .45em;
+  min-height: 2.75rem;
+  padding: .45rem .7rem;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  color: var(--ink);
+  font-size: .875rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.star-link svg { flex: none; color: var(--green); }
+.star-link:hover { border-color: var(--green); color: var(--green-dark); background: #f1f7f5; }
 
 @media (max-width: 660px) {
   .projects { grid-template-columns: minmax(0, 1fr); }
